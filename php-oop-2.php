@@ -21,8 +21,8 @@
 
       function __toString() {
           
-          return "nome: " . $this -> nome 
-                . "cognome: " . $this -> cognome; 
+          return "nome: " . $this -> nome . "<br>"
+                . " cognome: " . $this -> cognome; 
       }
   }
 
@@ -31,7 +31,7 @@
 
       public $annoDiNascita;
 
-      function __construct($nome, $cognome, $annoDiNascita;) {
+      function __construct($nome, $cognome, $annoDiNascita) {
 
           parent::__construct($nome, $cognome);
 
@@ -40,9 +40,9 @@
 
       function __toString(){
           
-          return "nome: " . $this -> nome
-                . "cognome: " . $this -> cognome 
-                . "anno di nascita: " . $this -> annoDiNascita; 
+          return "nome: " . $this -> nome . "<br>"
+                . " cognome: " . $this -> cognome . "<br>"
+                . " anno di nascita: " . $this -> annoDiNascita; 
       }
   }
 
@@ -60,9 +60,9 @@
       
       function __toString(){
           
-        return "nome: " . $this -> nome
-        . "cognome: " . $this -> cognome 
-        . "indirizzo di residenza: " . $this -> indirizzoRes; 
+        return "nome: " . $this -> nome  . "<br>"
+        . " cognome: " . $this -> cognome  . "<br>"
+        . " indirizzo di residenza: " . $this -> indirizzoRes; 
       }
 
   }
@@ -70,11 +70,14 @@
 //test
 
   $persona = new Persona("Paolo", "Rossi");
-  echo $persona;
+  echo "persona" . "<br>" . $persona;
+
+  echo "<br>--------<br>";
   
   $ospite = new Ospite("Paolo", "Rossi", 1973);
-  echo $ospite;
+  echo  "ospite" . "<br>" . $ospite;
 
+  echo "<br>--------<br>";
   
   $pagante = new Pagante("Paolo", "Rossi", "Via verdi 11");
-  echo $pagante;
+  echo "pagante" . "<br>" . $pagante;
